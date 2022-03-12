@@ -1,14 +1,13 @@
 package letCodePages;
 
+import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class PractiseElementsPage {
-
-    WebDriver driver;
+public class PractiseElementsPage extends BasePage {
 
     public PractiseElementsPage(WebDriver driver) {
-        this.driver = driver;
+       super(driver);
     }
 
     String linkXpath = "//a[text()='$$']";

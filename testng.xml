@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BusyQA Suite">
+    <test name="selenium tests">
+        <classes>
+            <class name="tests.DimensionsDemoTest">
+                <methods>
+                    <include name="testDimension"/>
+                    <include name="testMaximize"/>
+                </methods>
+            </class>
+            <class name="tests.NavigationCommandsDemoTest">
+                <methods>
+                    <include name="testNavigateTo"/>
+                </methods>
+            </class>
+            <class name="tests.automateNow.FormFieldsTest">
+                <methods>
+                    <include name="forFieldsTest1"/>
+                </methods>
+            </class>
+            <class name="tests.browserCommands.BrowserTest">
+                <methods>
+                    <include name="broswerCommandsTest"/>
+                </methods>
+            </class>
+            <class name="tests.letCodeTests.ButtonPageTest">
+                <methods>
+                    <include name="buttonTest1"/>
+                    <include name="buttonTest2"/>
+                </methods>
+            </class>
+            <class name="tests.letCodeTests.InputPageTest">
+                <methods>
+                    <include name="inputFieldTest"/>
+                </methods>
+            </class>
+            <class name="tests.xpathsdemo.XpathTest">
+                <methods>
+                    <include name="checkTheCountOfPracticeSitesTest"/>
+                    <include name="exceptionTest"/>
+                    <include name="findElementsTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

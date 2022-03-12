@@ -1,0 +1,10 @@
+xpath fido phones solution:
+
+//p[text()='motorola edge+']/ancestor::div[@class='dsa-nacTile__top']/following-sibling::div[contains(@class,'deviceInfo')]//p[contains(@class,'text-semi')]
+
+
+
+
+
+practise pages:
+http://leafground.com/home.html

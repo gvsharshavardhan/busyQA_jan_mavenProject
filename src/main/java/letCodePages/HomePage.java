@@ -1,13 +1,14 @@
 package letCodePages;
 
+import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class HomePage {
-    WebDriver driver;
+public class HomePage extends BasePage {
+
 
     public HomePage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     private String workSpaceButtonXpath = "//a[text()='Explore Workspace']";

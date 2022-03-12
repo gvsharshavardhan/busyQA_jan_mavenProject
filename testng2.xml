@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="busyqa suite" parallel="methods" thread-count="2">
+    <test name="letcodeTest">
+        <classes>
+            <class name="tests.letCodeTests.ButtonPageTest">
+                <methods>
+                    <include name="buttonTest2"/>
+                </methods>
+            </class>
+            <class name="tests.letCodeTests.InputPageTest"/>
+        </classes>
+    </test>
+    <test name="automateNowTest">
+        <classes>
+            <class name="tests.automateNow.FormFieldsTest"/>
+        </classes>
+    </test>
+</suite>

@@ -8,18 +8,18 @@ public class NavigationCommandsDemoTest extends BaseTest {
 
     @Test
     void testNavigateTo() {
-        //driver.get()
-        driver.navigate().to("https://www.selenium.dev/");
+        //getDriver().get()
+        getDriver().navigate().to("https://www.selenium.dev/");
 
-        driver.manage().window().maximize();
-        String homepagetitle = driver.getTitle();
+        getDriver().manage().window().maximize();
+        String homepagetitle = getDriver().getTitle();
 
-        driver.findElement(By.xpath("//a[@href='/downloads']")).click();
-        String downloadsPageTitle = driver.getTitle();
+        getDriver().findElement(By.xpath("//a[@href='/downloads']")).click();
+        String downloadsPageTitle = getDriver().getTitle();
         System.out.println("After clicking on downloads link: " + downloadsPageTitle);
 
-        driver.navigate().back();
-        String title = driver.getTitle();
+        getDriver().navigate().back();
+        String title = getDriver().getTitle();
 
         if (homepagetitle.equals(title)) {
             System.out.println("passed!!");

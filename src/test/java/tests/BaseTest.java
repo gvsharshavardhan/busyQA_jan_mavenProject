@@ -5,9 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.time.Duration;
 import java.util.Optional;
 
 public class BaseTest {
@@ -23,7 +25,7 @@ public class BaseTest {
     protected void setupBrowser() {
 //        String browser;
         WebDriver driver;
-        String browser = Optional.ofNullable(System.getProperty("browser")).orElse("edge");
+        String browser = Optional.ofNullable(System.getProperty("browser")).orElse("chrome");
 
         if (browser.equals("edge")) {
             WebDriverManager.edgedriver().setup();

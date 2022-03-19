@@ -1,4 +1,4 @@
-package tests.rough;
+package tests.general;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -16,9 +16,21 @@ public class RoughDemo extends BaseTest {
     @Test
     public void fidoMobileTest() {
         getDriver().get("https://www.fido.ca/phones/");
+        //
+        //drawbacks:
+        //1. no specific time
+        //2sec - 3sec
+//        try {
+//            Thread.sleep(10000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        //implicit wait
 
-        new WebDriverWait(getDriver(), Duration.ofSeconds(10))
-                .until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//h1"),"PHONES"));
+
+        WebElement header = new WebDriverWait(getDriver(), Duration.ofSeconds(3))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1")));
+        System.out.println(header.getText());
 
         String[] phoneNames = {"motorola edge+", "iPhone 7", "iPhone SE","Samsung Galaxy S20 FE 5G"};
 

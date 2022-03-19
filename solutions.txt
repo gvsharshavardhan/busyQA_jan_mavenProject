@@ -8,3 +8,75 @@ xpath fido phones solution:
 
 practise pages:
 http://leafground.com/home.html
+
+
+implicit wait:
+1. Global wait
+2. we instantiate implicit wait using driver.
+
+
+homework:
+#1
+https://the-internet.herokuapp.com/nested_frames
+
+scenario 1:
+left
+middle
+right
+bottom
+
+scenario 2:
+right
+bottom
+middle
+left
+
+#2
+https://letcode.in/radio
+uncheck all the checkboxes that are present on the page.
+hint: isSelected()
+
+#3
+https://letcode.in/elements
+
+#4 : slider
+https://letcode.in/slider
+
+#5 :  forms
+https://letcode.in/forms
+
+#6 : tables 1 and 2
+https://letcode.in/table
+
+#7 :
+https://letcode.in/advancedtable
+
+1. grab all the university names and store it in a list
+2. chooose a uniersity name randomly
+3. search with that university name and verify whetehr it is populated in the table
+4. print university website url on to the console.
+
+#8
+https://rahulshettyacademy.com/seleniumPractise/#/
+1. add 2kgs of veggies(Brocolli, Potato) to the kart.
+2. click on the kart
+3. validate the items
+4. click on proceed to checkout
+4. validate the table
+5. apply promocode
+6. validate the final amt(after applying the promo code)
+7. checkout
+8. wait until you are on home page
+
+properties
+reports
+javascript exe
+listeners
+excel sheets
+file upload
+remote webdriver
+
+jdbc
+1. connect db
+2. store data(create the table)
+3. retrive data

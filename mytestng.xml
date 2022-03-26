@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BusyQA Suite">
+    <listeners>
+        <listener class-name="listeners.MyListener"></listener>
+    </listeners>
+   <test name="my test">
+       <classes>
+           <class name="saucedemo.LoginTest"></class>
+       </classes>
+   </test>
+</suite>

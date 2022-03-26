@@ -52,8 +52,8 @@ https://letcode.in/table
 https://letcode.in/advancedtable
 
 1. grab all the university names and store it in a list
-2. chooose a uniersity name randomly
-3. search with that university name and verify whetehr it is populated in the table
+2. choose a university name randomly
+3. search with that university name and verify whether it is populated in the table
 4. print university website url on to the console.
 
 #8
@@ -80,3 +80,20 @@ jdbc
 1. connect db
 2. store data(create the table)
 3. retrive data
+
+
+greenkart
+
+pom
+excel sheet
+get env data, url, browser - prop
+listener
+report
+3 testcases
+1.end to end flow
+2.pagination - top deals
+3.sorting - top deals
+screenshots
+
+javascriptexector
+windowhandling

@@ -1,51 +1,23 @@
 package tests;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import driverManager.DriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import java.time.Duration;
-import java.util.Optional;
-
 public class BaseTest {
-
-    //saviour
-    private final ThreadLocal<WebDriver> tl = new ThreadLocal<>();
-
     protected WebDriver getDriver() {
-        return tl.get();
+        return DriverManager.getDriver();
     }
 
     @BeforeMethod
     protected void setupBrowser() {
-//        String browser;
-        WebDriver driver;
-        String browser = Optional.ofNullable(System.getProperty("browser")).orElse("chrome");
-
-        if (browser.equals("edge")) {
-            WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
-            tl.set(driver);
-        } else if (browser.equals("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
-            tl.set(driver);
-        } else {
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-            tl.set(driver);
-        }
-
+        DriverManager.initDriver();
         getDriver().manage().window().maximize();
     }
 
     @AfterMethod
     protected void quitBrowser() {
-        getDriver().quit();
+        DriverManager.quitDriver();
     }
 }
